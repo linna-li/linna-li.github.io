@@ -18,6 +18,7 @@ origin	https://github.com/linna-li/linna-li.github.io.git (push)
 
 * add md file in content/posts
 * hugo -t LeaveIt
+* git add --all, git commit -m "commit for content", git push
 * cd public
-* git push
+* git add --all, git commit -m "commit for public", git push
   
