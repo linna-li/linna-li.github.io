@@ -40,7 +40,7 @@ preserveTaxonomyNames = true
     avatar = "/images/me/avatar.jpeg"           # Author's avatar
     subtitle = "I am studying from zero"         # Subtitle
     cdn_url = ""           # Base CDN URL
-    home_mode = "" # post or other
+    home_mode = "post" # post or other
 
     google_verification = ""
    
