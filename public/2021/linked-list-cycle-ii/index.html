@@ -9,9 +9,9 @@
   <meta name="description" content="Study Note">
   <meta name="keywords" content="work server-side">
   
-  <link rel="prev" href="https://linna-li.github.io/2020/add-two-numbers/" />
-  <link rel="next" href="https://linna-li.github.io/2021/linked-list-cycle-ii/" />
-  <link rel="canonical" href="https://linna-li.github.io/2020/remove-nth-node/" />
+  <link rel="prev" href="https://linna-li.github.io/2020/remove-nth-node/" />
+  <link rel="next" href="https://linna-li.github.io/2021/linked-list-cycle/" />
+  <link rel="canonical" href="https://linna-li.github.io/2021/linked-list-cycle-ii/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           LeetCode-19 | Linna
+           LeetCode-142 | Linna
        
   </title>
-  <meta name="title" content="LeetCode-19 | Linna">
+  <meta name="title" content="LeetCode-142 | Linna">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,20 +44,20 @@
          "@id": "https:\/\/linna-li.github.io"
     },
     "articleSection" : "posts",
-    "name" : "LeetCode-19",
-    "headline" : "LeetCode-19",
-    "description" : "BackGround ",
+    "name" : "LeetCode-142",
+    "headline" : "LeetCode-142",
+    "description" : "Description  如果链中有环，找到环的入口\n Note  大神给画的图.\n  快指针和慢指针会在环的内部相遇 经过推导可以知道 起点到环入口的长度==相遇点到环入口的长度 让快慢指针每次走一步就可以找到环入口的长度\n ",
     "inLanguage" : "en-us",
     "author" : "linna.li",
     "creator" : "linna.li",
     "publisher": "linna.li",
     "accountablePerson" : "linna.li",
     "copyrightHolder" : "linna.li",
-    "copyrightYear" : "2020",
-    "datePublished": "2020-12-30 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2020-12-30 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/linna-li.github.io\/2020\/remove-nth-node\/",
-    "wordCount" : "1",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-01-07 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2021-01-07 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/linna-li.github.io\/2021\/linked-list-cycle-ii\/",
+    "wordCount" : "8",
     "keywords" : [ "LinkedList","leetcode", "Linna"]
 }
 </script>
@@ -112,11 +112,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">LeetCode-19</h1>
+        <h1 class="post-title" itemprop="name headline">LeetCode-142</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://linna-li.github.io" rel="author">linna.li</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-12-30 itemprop="datePublished">December 30, 2020</time>
+                on <time datetime=2021-01-07 itemprop="datePublished">January 7, 2021</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -130,6 +130,8 @@
         
 
         
+            
+        
 
         
         
@@ -142,7 +144,20 @@
           
           
 
-          <h2 id="background">BackGround</h2>
+          <h2 id="description">Description</h2>
+<blockquote>
+<p>如果链中有环，找到环的入口</p>
+</blockquote>
+<h2 id="note">Note</h2>
+<blockquote>
+<p>大神给画的图.</p>
+</blockquote>
+<p><img src="/images/leetcode142.PNG" alt=""></p>
+<blockquote>
+<p>快指针和慢指针会在环的内部相遇
+经过推导可以知道 起点到环入口的长度==相遇点到环入口的长度
+让快慢指针每次走一步就可以找到环入口的长度</p>
+</blockquote>
 
     </div>
 
@@ -157,7 +172,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://linna-li.github.io/2020/remove-nth-node/>https://linna-li.github.io/2020/remove-nth-node/</span>
+                    <a href=https://linna-li.github.io/2021/linked-list-cycle-ii/>https://linna-li.github.io/2021/linked-list-cycle-ii/</span>
             </p>
             
             
@@ -185,10 +200,10 @@
 
     <div class="post-nav">
         
-        <a href="https://linna-li.github.io/2020/add-two-numbers/" class="prev" rel="prev" title="LeetCode-2"><i class="iconfont icon-left"></i>&nbsp;LeetCode-2</a>
+        <a href="https://linna-li.github.io/2020/remove-nth-node/" class="prev" rel="prev" title="LeetCode-19"><i class="iconfont icon-left"></i>&nbsp;LeetCode-19</a>
          
         
-        <a href="https://linna-li.github.io/2021/linked-list-cycle-ii/" class="next" rel="next" title="LeetCode-142">LeetCode-142&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://linna-li.github.io/2021/linked-list-cycle/" class="next" rel="next" title="LeetCode-141">LeetCode-141&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -230,8 +245,9 @@
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 
