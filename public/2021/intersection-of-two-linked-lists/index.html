@@ -9,9 +9,9 @@
   <meta name="description" content="Study Note">
   <meta name="keywords" content="work server-side">
   
-  <link rel="prev" href="https://linna-li.github.io/2021/linked-list-cycle-ii/" />
-  <link rel="next" href="https://linna-li.github.io/2021/intersection-of-two-linked-lists/" />
-  <link rel="canonical" href="https://linna-li.github.io/2021/linked-list-cycle/" />
+  <link rel="prev" href="https://linna-li.github.io/2021/linked-list-cycle/" />
+  
+  <link rel="canonical" href="https://linna-li.github.io/2021/intersection-of-two-linked-lists/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           LeetCode-141 | Linna
+           LeetCode-160 | Linna
        
   </title>
-  <meta name="title" content="LeetCode-141 | Linna">
+  <meta name="title" content="LeetCode-160 | Linna">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/linna-li.github.io"
     },
     "articleSection" : "posts",
-    "name" : "LeetCode-141",
-    "headline" : "LeetCode-141",
-    "description" : "BackGround  这道题我记得思路是快慢指针, 但是纠结了好久怎么证明，后来小伙伴提醒我说线性增长，有环的话一定会相遇。\n Note 循环的结束条件都是查快指针就可以",
+    "name" : "LeetCode-160",
+    "headline" : "LeetCode-160",
+    "description" : "Description  找到两个链表的交点\n Note  这是一道easy题，但是要求时间复杂度是O(n)，于是我想了好久。。 后来发现最笨的方法也可以过 就是现求出来两个链表的差距，然后走到相同的相对位置上，看看能不能找到一个相同的节点，如果能找到，就说明这个节点是相交的节点（因为后面不会再分叉开了）\n后来我去看了讨论区，大部分人还是和我一样的解法，有一个大神的解法代码更简单，两个指针一起走，走到头了之后就去另外一个链表接着走，直到找到一个相同的节点，或者两个都是null的时候，说明没有相交节点\n ",
     "inLanguage" : "en-us",
     "author" : "linna.li",
     "creator" : "linna.li",
@@ -54,10 +54,10 @@
     "accountablePerson" : "linna.li",
     "copyrightHolder" : "linna.li",
     "copyrightYear" : "2021",
-    "datePublished": "2021-01-07 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2021-01-07 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/linna-li.github.io\/2021\/linked-list-cycle\/",
-    "wordCount" : "5",
+    "datePublished": "2021-01-08 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2021-01-08 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/linna-li.github.io\/2021\/intersection-of-two-linked-lists\/",
+    "wordCount" : "7",
     "keywords" : [ "LinkedList","leetcode", "Linna"]
 }
 </script>
@@ -112,11 +112,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">LeetCode-141</h1>
+        <h1 class="post-title" itemprop="name headline">LeetCode-160</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://linna-li.github.io" rel="author">linna.li</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2021-01-07 itemprop="datePublished">January 7, 2021</time>
+                on <time datetime=2021-01-08 itemprop="datePublished">January 8, 2021</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -142,12 +142,17 @@
           
           
 
-          <h2 id="background">BackGround</h2>
+          <h2 id="description">Description</h2>
 <blockquote>
-<p>这道题我记得思路是快慢指针, 但是纠结了好久怎么证明，后来小伙伴提醒我说线性增长，有环的话一定会相遇。</p>
+<p>找到两个链表的交点</p>
 </blockquote>
 <h2 id="note">Note</h2>
-<p>循环的结束条件都是查快指针就可以</p>
+<blockquote>
+<p>这是一道easy题，但是要求时间复杂度是O(n)，于是我想了好久。。
+后来发现最笨的方法也可以过
+就是现求出来两个链表的差距，然后走到相同的相对位置上，看看能不能找到一个相同的节点，如果能找到，就说明这个节点是相交的节点（因为后面不会再分叉开了）</p>
+<p>后来我去看了讨论区，大部分人还是和我一样的解法，有一个大神的解法代码更简单，两个指针一起走，走到头了之后就去另外一个链表接着走，直到找到一个相同的节点，或者两个都是null的时候，说明没有相交节点</p>
+</blockquote>
 
     </div>
 
@@ -162,7 +167,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://linna-li.github.io/2021/linked-list-cycle/>https://linna-li.github.io/2021/linked-list-cycle/</span>
+                    <a href=https://linna-li.github.io/2021/intersection-of-two-linked-lists/>https://linna-li.github.io/2021/intersection-of-two-linked-lists/</span>
             </p>
             
             
@@ -190,10 +195,8 @@
 
     <div class="post-nav">
         
-        <a href="https://linna-li.github.io/2021/linked-list-cycle-ii/" class="prev" rel="prev" title="LeetCode-142"><i class="iconfont icon-left"></i>&nbsp;LeetCode-142</a>
+        <a href="https://linna-li.github.io/2021/linked-list-cycle/" class="prev" rel="prev" title="LeetCode-141"><i class="iconfont icon-left"></i>&nbsp;LeetCode-141</a>
          
-        
-        <a href="https://linna-li.github.io/2021/intersection-of-two-linked-lists/" class="next" rel="next" title="LeetCode-160">LeetCode-160&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
