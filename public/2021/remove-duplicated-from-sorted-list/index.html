@@ -9,9 +9,9 @@
   <meta name="description" content="Study Note">
   <meta name="keywords" content="work server-side">
   
-  <link rel="prev" href="https://linna-li.github.io/2020/remove-nth-node/" />
-  <link rel="next" href="https://linna-li.github.io/2021/linked-list-cycle/" />
-  <link rel="canonical" href="https://linna-li.github.io/2021/linked-list-cycle-ii/" />
+  <link rel="prev" href="https://linna-li.github.io/2021/delete-node-in-a-linked-list/" />
+  <link rel="next" href="https://linna-li.github.io/2021/merge-two-sorted-lists/" />
+  <link rel="canonical" href="https://linna-li.github.io/2021/remove-duplicated-from-sorted-list/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           LeetCode-142 | Linna
+           LeetCode-83 | Linna
        
   </title>
-  <meta name="title" content="LeetCode-142 | Linna">
+  <meta name="title" content="LeetCode-83 | Linna">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/linna-li.github.io"
     },
     "articleSection" : "posts",
-    "name" : "LeetCode-142",
-    "headline" : "LeetCode-142",
-    "description" : "Description  如果链中有环，找到环的入口\n My Answer  大神给画的图.\n  快指针和慢指针会在环的内部相遇 经过推导可以知道 起点到环入口的长度==相遇点到环入口的长度 让快慢指针每次走一步就可以找到环入口的长度\n Complexity Other Answer ",
+    "name" : "LeetCode-83",
+    "headline" : "LeetCode-83",
+    "description" : "Description  给了一个链表，删除其中重复的节点\n My Answer  我的思路很简单 存下before和current的节点，进行比较 记得判断边界case，head是null的情况\n Complexity 我自己的解法时间复杂度应该是O(n)了，但是结果却是：\n Runtime: 1 ms, faster than 15.21% of Java online submissions for Remove Duplicates from Sorted List. Memory Usage: 41.4 MB, less than 6.06% of Java online submissions for Remove Duplicates from Sorted List.\n Other Answer  可以优化成为只要一个辅助节点。优化过后是：   Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Duplicates from Sorted List. Memory Usage: 38.",
     "inLanguage" : "en-us",
     "author" : "linna.li",
     "creator" : "linna.li",
@@ -54,10 +54,10 @@
     "accountablePerson" : "linna.li",
     "copyrightHolder" : "linna.li",
     "copyrightYear" : "2021",
-    "datePublished": "2021-01-07 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2021-01-07 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/linna-li.github.io\/2021\/linked-list-cycle-ii\/",
-    "wordCount" : "12",
+    "datePublished": "2021-01-10 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2021-01-10 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/linna-li.github.io\/2021\/remove-duplicated-from-sorted-list\/",
+    "wordCount" : "79",
     "keywords" : [ "LinkedList","leetcode", "Linna"]
 }
 </script>
@@ -112,11 +112,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">LeetCode-142</h1>
+        <h1 class="post-title" itemprop="name headline">LeetCode-83</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://linna-li.github.io" rel="author">linna.li</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2021-01-07 itemprop="datePublished">January 7, 2021</time>
+                on <time datetime=2021-01-10 itemprop="datePublished">January 10, 2021</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -129,8 +129,6 @@
     <div class="post-content">
         
 
-        
-            
         
 
         
@@ -146,20 +144,31 @@
 
           <h2 id="description">Description</h2>
 <blockquote>
-<p>如果链中有环，找到环的入口</p>
+<p>给了一个链表，删除其中重复的节点</p>
 </blockquote>
 <h2 id="my-answer">My Answer</h2>
 <blockquote>
-<p>大神给画的图.</p>
-</blockquote>
-<p><img src="/images/142.jpeg" alt=""></p>
-<blockquote>
-<p>快指针和慢指针会在环的内部相遇
-经过推导可以知道 起点到环入口的长度==相遇点到环入口的长度
-让快慢指针每次走一步就可以找到环入口的长度</p>
+<p>我的思路很简单
+存下before和current的节点，进行比较
+记得判断边界case，head是null的情况</p>
 </blockquote>
 <h2 id="complexity">Complexity</h2>
+<p>我自己的解法时间复杂度应该是O(n)了，但是结果却是：</p>
+<blockquote>
+<p>Runtime: 1 ms, faster than 15.21% of Java online submissions for Remove Duplicates from Sorted List.
+Memory Usage: 41.4 MB, less than 6.06% of Java online submissions for Remove Duplicates from Sorted List.</p>
+</blockquote>
 <h2 id="other-answer">Other Answer</h2>
+<ol>
+<li>可以优化成为只要一个辅助节点。优化过后是：</li>
+</ol>
+<blockquote>
+<p>Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Duplicates from Sorted List.
+Memory Usage: 38.6 MB, less than 35.44% of Java online submissions for Remove Duplicates from Sorted List.&gt;</p>
+</blockquote>
+<ol start="2">
+<li>可以用递归</li>
+</ol>
 
     </div>
 
@@ -174,7 +183,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://linna-li.github.io/2021/linked-list-cycle-ii/>https://linna-li.github.io/2021/linked-list-cycle-ii/</span>
+                    <a href=https://linna-li.github.io/2021/remove-duplicated-from-sorted-list/>https://linna-li.github.io/2021/remove-duplicated-from-sorted-list/</span>
             </p>
             
             
@@ -202,10 +211,10 @@
 
     <div class="post-nav">
         
-        <a href="https://linna-li.github.io/2020/remove-nth-node/" class="prev" rel="prev" title="LeetCode-19"><i class="iconfont icon-left"></i>&nbsp;LeetCode-19</a>
+        <a href="https://linna-li.github.io/2021/delete-node-in-a-linked-list/" class="prev" rel="prev" title="LeetCode-237"><i class="iconfont icon-left"></i>&nbsp;LeetCode-237</a>
          
         
-        <a href="https://linna-li.github.io/2021/linked-list-cycle/" class="next" rel="next" title="LeetCode-141">LeetCode-141&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://linna-li.github.io/2021/merge-two-sorted-lists/" class="next" rel="next" title="LeetCode-21">LeetCode-21&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -247,9 +256,8 @@
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 

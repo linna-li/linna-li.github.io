@@ -9,9 +9,9 @@
   <meta name="description" content="Study Note">
   <meta name="keywords" content="work server-side">
   
-  <link rel="prev" href="https://linna-li.github.io/2020/remove-nth-node/" />
-  <link rel="next" href="https://linna-li.github.io/2021/linked-list-cycle/" />
-  <link rel="canonical" href="https://linna-li.github.io/2021/linked-list-cycle-ii/" />
+  <link rel="prev" href="https://linna-li.github.io/2021/intersection-of-two-linked-lists/" />
+  <link rel="next" href="https://linna-li.github.io/2021/remove-duplicated-from-sorted-list/" />
+  <link rel="canonical" href="https://linna-li.github.io/2021/delete-node-in-a-linked-list/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           LeetCode-142 | Linna
+           LeetCode-237 | Linna
        
   </title>
-  <meta name="title" content="LeetCode-142 | Linna">
+  <meta name="title" content="LeetCode-237 | Linna">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/linna-li.github.io"
     },
     "articleSection" : "posts",
-    "name" : "LeetCode-142",
-    "headline" : "LeetCode-142",
-    "description" : "Description  如果链中有环，找到环的入口\n My Answer  大神给画的图.\n  快指针和慢指针会在环的内部相遇 经过推导可以知道 起点到环入口的长度==相遇点到环入口的长度 让快慢指针每次走一步就可以找到环入口的长度\n Complexity Other Answer ",
+    "name" : "LeetCode-237",
+    "headline" : "LeetCode-237",
+    "description" : "Description  从链表中删除给定的节点 没有给定头节点，只给定了要被删掉的节点\n My Answer  这是一道easy题，但是好多人dislike，确实我自己也想不到这个解法，最后还是看了答案 但是没有办法找到上一个节点，所以只能把自己的值改成下一个节点的值，然后把自己的next修改掉\n Complexity Other Answer ",
     "inLanguage" : "en-us",
     "author" : "linna.li",
     "creator" : "linna.li",
@@ -54,10 +54,10 @@
     "accountablePerson" : "linna.li",
     "copyrightHolder" : "linna.li",
     "copyrightYear" : "2021",
-    "datePublished": "2021-01-07 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2021-01-07 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/linna-li.github.io\/2021\/linked-list-cycle-ii\/",
-    "wordCount" : "12",
+    "datePublished": "2021-01-09 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2021-01-09 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/linna-li.github.io\/2021\/delete-node-in-a-linked-list\/",
+    "wordCount" : "10",
     "keywords" : [ "LinkedList","leetcode", "Linna"]
 }
 </script>
@@ -112,11 +112,11 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">LeetCode-142</h1>
+        <h1 class="post-title" itemprop="name headline">LeetCode-237</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://linna-li.github.io" rel="author">linna.li</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2021-01-07 itemprop="datePublished">January 7, 2021</time>
+                on <time datetime=2021-01-09 itemprop="datePublished">January 9, 2021</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -129,8 +129,6 @@
     <div class="post-content">
         
 
-        
-            
         
 
         
@@ -146,17 +144,13 @@
 
           <h2 id="description">Description</h2>
 <blockquote>
-<p>如果链中有环，找到环的入口</p>
+<p>从链表中删除给定的节点
+没有给定头节点，只给定了要被删掉的节点</p>
 </blockquote>
 <h2 id="my-answer">My Answer</h2>
 <blockquote>
-<p>大神给画的图.</p>
-</blockquote>
-<p><img src="/images/142.jpeg" alt=""></p>
-<blockquote>
-<p>快指针和慢指针会在环的内部相遇
-经过推导可以知道 起点到环入口的长度==相遇点到环入口的长度
-让快慢指针每次走一步就可以找到环入口的长度</p>
+<p>这是一道easy题，但是好多人dislike，确实我自己也想不到这个解法，最后还是看了答案
+但是没有办法找到上一个节点，所以只能把自己的值改成下一个节点的值，然后把自己的next修改掉</p>
 </blockquote>
 <h2 id="complexity">Complexity</h2>
 <h2 id="other-answer">Other Answer</h2>
@@ -174,7 +168,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://linna-li.github.io/2021/linked-list-cycle-ii/>https://linna-li.github.io/2021/linked-list-cycle-ii/</span>
+                    <a href=https://linna-li.github.io/2021/delete-node-in-a-linked-list/>https://linna-li.github.io/2021/delete-node-in-a-linked-list/</span>
             </p>
             
             
@@ -202,10 +196,10 @@
 
     <div class="post-nav">
         
-        <a href="https://linna-li.github.io/2020/remove-nth-node/" class="prev" rel="prev" title="LeetCode-19"><i class="iconfont icon-left"></i>&nbsp;LeetCode-19</a>
+        <a href="https://linna-li.github.io/2021/intersection-of-two-linked-lists/" class="prev" rel="prev" title="LeetCode-160"><i class="iconfont icon-left"></i>&nbsp;LeetCode-160</a>
          
         
-        <a href="https://linna-li.github.io/2021/linked-list-cycle/" class="next" rel="next" title="LeetCode-141">LeetCode-141&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://linna-li.github.io/2021/remove-duplicated-from-sorted-list/" class="next" rel="next" title="LeetCode-83">LeetCode-83&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -247,9 +241,8 @@
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 
