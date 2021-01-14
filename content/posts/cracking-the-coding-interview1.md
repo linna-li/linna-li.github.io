@@ -20,7 +20,7 @@ Big O 是用来描述一个算法有效性的 O()
 
 在插入数据到ArrayList的时候，正常是在末尾插入，所以复杂度是O(1), 但是满了之后会扩大容量为两倍，然后复制现有的进去，再进行插入，所以花费的时间是n，所以插入x个数据的时间是：1+2+4+....+x (省略了不需要复制的时候插入消耗的时间)
 所以插入每一个花费的时间是 （1+2+4+....+x）/x = 
-书上说是 O（1）
+书上说是 O（1） （不太懂 这里）
 
 ### Log N Runtime
 
@@ -72,5 +72,65 @@ int factorial(int n){
 
 #### Example 12
 排列(permutation) 
+void permutation(String str){
+    permutation(str, "");
+}
+void permutatation(String str, String prefix){
+    if(str.length()==0){
+        System.out.println(prefix);
+    }else{
+        for(int i = 0;i < str.length; i++){
+            String rem = str.substring(0,i) + str.substring(i+1);
+            permutation(rem, prefix + str.charAt(i));
+        }
+    }
+}
+permutatation 被call了多少次：假设有7个字符，一共会有7！次叫了84行
+ （不太懂 这里）
+Picture a large call tree representing all the calls, There are n! leaves, as shown above. Each leaf is attached to a path of length n. Therefore, we know there will be no more than n*n! nodes (founction calls) in this tree.
+每次需要花费的时间是n（可以理解）所以最终花费的时间是 O(n*n*n!)
 
+#### Example 13
+int fib(int n){
+    if(n<=0) return 0;
+    else if(n==1) return 1;
+    else return fib(n-1) + fib(n-2);
+}
+可以利用树深度的规律 O(branched^depth) = O(2^n)
+一般来说只要看到有多个递归的call，一般时间复杂度都是指数级别的
 
+#### Example 14
+
+void allFib(int n) {
+    for(int i = 0;i< n; i++ ){
+        System.out.println(i+fib(i));
+    }
+}
+int fib(int n){
+    if(n<=0) return 0;
+    else if(n==1) return 1;
+    return fib(n-1) + fib(n-2);
+}
+注意这个的时间复杂度不是O(n2^n)， 因为每一次进去fib的n都是不一样的
+应该是2^1 + 2^2 + 2^3 +.....+ 2^n = 2^(n+1) O(2^n)
+
+#### Example 15
+加了一个cache之后，时间复杂度变成了 O(n)
+
+#### Example 16
+int powersof2(int n){
+    if(n<1){
+        return 0;
+    }else if(n == 1){
+        System.out.print(1);
+        return 1;
+    }else{
+        iint prev = powerOf(n/2);
+        int curr = prev * 2;
+        System.out.println(curr);
+        return curr;
+    }
+}
+时间复杂度是 O(logn)
+
+### VI 9
