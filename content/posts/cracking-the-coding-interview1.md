@@ -86,7 +86,7 @@ void permutatation(String str, String prefix){
     }
 }
 permutatation 被call了多少次：假设有7个字符，一共会有7！次叫了84行
- （不太懂 这里）
+ （不太懂 这里，和小伙伴讨论了一下，他也觉得应该是只有 n!）
 Picture a large call tree representing all the calls, There are n! leaves, as shown above. Each leaf is attached to a path of length n. Therefore, we know there will be no more than n*n! nodes (founction calls) in this tree.
 每次需要花费的时间是n（可以理解）所以最终花费的时间是 O(n*n*n!)
 
@@ -133,4 +133,18 @@ int powersof2(int n){
 }
 时间复杂度是 O(logn)
 
-### VI 9
+### VI 12
+
+int intersection(int[] a, int[] b){
+    mergeSort(b);
+    int interect = 0;
+
+    for(int x:a){
+        if(binarySearch(b,x)>=0){
+            intersect++;
+        }
+    }
+    return intersect;
+}
+mergeSort 的时间复杂度是 blogb, binarySearch的时间复杂度是logb，a次循环所以是alogb
+总共为 (a+b)logb

@@ -57,7 +57,7 @@
     "datePublished": "2021-01-13 00:00:00 \x2b0000 UTC",
     "dateModified" : "2021-01-13 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/linna-li.github.io\/2021\/cracking-the-coding-interview1\/",
-    "wordCount" : "343",
+    "wordCount" : "369",
     "keywords" : [ "basic-knowledge", "Linna"]
 }
 </script>
@@ -211,7 +211,7 @@ permutation(rem, prefix + str.charAt(i));
 }
 }
 permutatation 被call了多少次：假设有7个字符，一共会有7！次叫了84行
-（不太懂 这里）
+（不太懂 这里，和小伙伴讨论了一下，他也觉得应该是只有 n!）
 Picture a large call tree representing all the calls, There are n! leaves, as shown above. Each leaf is attached to a path of length n. Therefore, we know there will be no more than n<em>n! nodes (founction calls) in this tree.
 每次需要花费的时间是n（可以理解）所以最终花费的时间是 O(n</em>n*n!)</p>
 <h4 id="example-13">Example 13</h4>
@@ -252,7 +252,20 @@ return curr;
 }
 }
 时间复杂度是 O(logn)</p>
-<h3 id="vi-9">VI 9</h3>
+<h3 id="vi-12">VI 12</h3>
+<p>int intersection(int[] a, int[] b){
+mergeSort(b);
+int interect = 0;</p>
+<pre><code>for(int x:a){
+    if(binarySearch(b,x)&gt;=0){
+        intersect++;
+    }
+}
+return intersect;
+</code></pre>
+<p>}
+mergeSort 的时间复杂度是 blogb, binarySearch的时间复杂度是logb，a次循环所以是alogb
+总共为 (a+b)logb</p>
 
     </div>
 
