@@ -22,10 +22,10 @@
     
     <item>
       <title>Cracking the code interview1</title>
-      <link>https://linna-li.github.io/2021/cracking-the-coding-interview1/</link>
+      <link>https://linna-li.github.io/2021/ctci1/</link>
       <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://linna-li.github.io/2021/cracking-the-coding-interview1/</guid>
+      <guid>https://linna-li.github.io/2021/ctci1/</guid>
       <description>BackGround 昨天前辈借我一本书让我读，全英文，所以在昨天晚上的第一次尝试就读着读着睡着了。 今晚我来邻居小姐姐家找她一起学习，顺利地读了一部分。前五章是关于interview的介绍，准备，还有行为测试，就先略过了。 前辈的建议是做完每一章的算法题
 Big O Big O 是用来描述一个算法有效性的 O() 空间复杂度，包好了递归函数中用到的变量 可以省略到非主流的部分：O(x!) &amp;gt; O(2^x) &amp;gt; O(x^2) &amp;gt; O(xlogx) &amp;gt; O(x) &amp;gt; O(logx)
 Amortized Time(均摊时间)： 在插入数据到ArrayList的时候，正常是在末尾插入，所以复杂度是O(1), 但是满了之后会扩大容量为两倍，然后复制现有的进去，再进行插入，所以花费的时间是n，所以插入x个数据的时间是：1+2+4+&amp;hellip;.+x (省略了不需要复制的时候插入消耗的时间) 所以插入每一个花费的时间是 （1+2+4+&amp;hellip;.+x）/x = 书上说是 O（1） （不太懂 这里）

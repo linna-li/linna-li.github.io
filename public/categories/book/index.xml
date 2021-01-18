@@ -6,10 +6,24 @@
     <description>Recent content in book on Linna</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://linna-li.github.io/categories/book/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CTCI3-Technical Questions</title>
+      <link>https://linna-li.github.io/2021/ctci3/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2021/ctci3/</guid>
+      <description>String和Array总是可以互换的问题
+ 实现Hashtables 哈希表（Hashtable）又称为“散置”，Hashtable是会根据索引键的哈希程序代码组织成的索引键（Key）和值（Value）配对的集合。
+ 根据key计算hash值 map hash值到一个index里（array） 每一个index是一个链表，链表里的每一个元素是 (key, value)  实现ArrayList和Resizable Arrays  Resizable Arrays是可变大小的数组 amortized insertion的runtime是O(1) 在向一个list插入数据的时候，每次满了就会把容量扩大一倍，然后之前的复制到新的里面去
+ StringBuilder 链接n个相同长度的string时候，如果使用String，时间复杂度是 O(xn^2) 如果使用了StringBuilder（可变长度的string）时间复杂度就是O(n) ?
+Interview Question  判断一个String里面的元素是不是都是不重复的，要求不使用一个多余的数据结构  思考： 不能使用map ？ 只是用String 把每一个字符转换为他的Ascii码，存在数组里，如果数组中有数据了，就代表重复的。 时间复杂度O(n), n 为字符串的长度，空间复杂度是需要一个128容量的array
+boolean isUnique(String s){ if(s==null||s.length()==0){ return true; } int[] asciiArray = new int[128]; for(int i = 0;i &amp;lt; s.length();i++){ if(asciiArray[Integer.valueOf(s.chatAt(i))]!=0){ return false; }else{ asciiArray[Integer.valueOf(s.chatAt(i))] = 1; } } return true; } 答案：  首先应该问面试官是ASCII还是unicode: ASCII是一个字节(1 byte (字节)= 8 bit(位))，只支持英文；Unicode两个字节支持所有语言；UTF-8是1-6个字节，英文字母一个字节汉字三个字节生僻字4-6个字节； ASCII码一共规定了128个字符的编码（0 000 0000–0 111 1111），比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0  boolean isUniqueChars(String str){ if(str.</description>
+    </item>
     
     <item>
       <title>CTCI2-Technical Questions</title>
@@ -22,10 +36,10 @@
     
     <item>
       <title>Cracking the code interview1</title>
-      <link>https://linna-li.github.io/2021/cracking-the-coding-interview1/</link>
+      <link>https://linna-li.github.io/2021/ctci1/</link>
       <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://linna-li.github.io/2021/cracking-the-coding-interview1/</guid>
+      <guid>https://linna-li.github.io/2021/ctci1/</guid>
       <description>BackGround 昨天前辈借我一本书让我读，全英文，所以在昨天晚上的第一次尝试就读着读着睡着了。 今晚我来邻居小姐姐家找她一起学习，顺利地读了一部分。前五章是关于interview的介绍，准备，还有行为测试，就先略过了。 前辈的建议是做完每一章的算法题
 Big O Big O 是用来描述一个算法有效性的 O() 空间复杂度，包好了递归函数中用到的变量 可以省略到非主流的部分：O(x!) &amp;gt; O(2^x) &amp;gt; O(x^2) &amp;gt; O(xlogx) &amp;gt; O(x) &amp;gt; O(logx)
 Amortized Time(均摊时间)： 在插入数据到ArrayList的时候，正常是在末尾插入，所以复杂度是O(1), 但是满了之后会扩大容量为两倍，然后复制现有的进去，再进行插入，所以花费的时间是n，所以插入x个数据的时间是：1+2+4+&amp;hellip;.+x (省略了不需要复制的时候插入消耗的时间) 所以插入每一个花费的时间是 （1+2+4+&amp;hellip;.+x）/x = 书上说是 O（1） （不太懂 这里）
