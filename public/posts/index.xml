@@ -167,6 +167,26 @@ Example 8 有一个String的数组，需要给每一个string自己排序，然�
     </item>
     
     <item>
+      <title>如何用树莓派做自己的server</title>
+      <link>https://linna-li.github.io/2020/raspberry-set/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2020/raspberry-set/</guid>
+      <description> 成果： node_exporter for my server at home.
+ </description>
+    </item>
+    
+    <item>
+      <title>设置路由器时要注意的安全问题</title>
+      <link>https://linna-li.github.io/2020/router-security/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2020/router-security/</guid>
+      <description> 想跟着前辈自己在家搭个server，于是新买了一个路由器，前辈说路由器的安全很重要，为了保护server需要好好设置一下
+ </description>
+    </item>
+    
+    <item>
       <title>Try Http3 QUIC By using CURL</title>
       <link>https://linna-li.github.io/2020/try-curl-http3-quic/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>

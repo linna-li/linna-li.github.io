@@ -114,7 +114,50 @@ boolean isPermutation(String s1, String s2){
 ```
 #### 答案
 也是要先向面试官确认需求
-例如
+例如: 
+1. 大小写要不要区分
+2. 字符一样但是排列过的算不算，例如GOD与DOG
+3. 空格算不算一个字符
+
+让我们假设需要区分大小写，而且空格也算字符。
+Solution1:
+排序
+```java
+String sort(String s){
+    char[] content = s.toCharArray();
+    Arrays.sort(content);
+    return new String(content);
+}
+boolean permutation(String s, String t){
+    if(s.length()!=t.length()){
+        return false;
+    }
+    return sort(s).equals(sort(t));
+}
+```
+Solution2:
+思路和我的很像，但是用一个array就可以实现了
+```java
+boolean permutation(String s, String t){
+    if(s.length()!=t.length()){
+        return false;
+    }
+    int[] letters = new int[128]; //前提是用ASCII编码
+    char[] s_array = s.toCharArray();
+    for(char c : s_array){
+        letters[c]++; // c 直接被强制转化成了int吗
+    }
+    for(int i = 0;i<t.length();i++){
+        int c = (int)t.charAt(i);
+        letters[c]--;
+        if(letters[c] < 0){
+            return false;
+        }
+    }
+    return true;
+}
+```
+
 
 总结经验：
 1. 没有考虑到要向面试官确认需求！！！

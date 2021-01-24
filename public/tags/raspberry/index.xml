@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>raspberry on Linna</title>
+    <link>https://linna-li.github.io/tags/raspberry/</link>
+    <description>Recent content in raspberry on Linna</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://linna-li.github.io/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何用树莓派做自己的server</title>
+      <link>https://linna-li.github.io/2020/raspberry-set/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2020/raspberry-set/</guid>
+      <description> 成果： node_exporter for my server at home.
+ </description>
+    </item>
+    
+  </channel>
+</rss>
