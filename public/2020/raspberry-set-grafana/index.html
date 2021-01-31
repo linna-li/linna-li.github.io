@@ -9,9 +9,9 @@
   <meta name="description" content="Study Note">
   <meta name="keywords" content="work server-side">
   
-  <link rel="prev" href="https://linna-li.github.io/2020/raspberry-set-grafana/" />
-  <link rel="next" href="https://linna-li.github.io/2021/142-linked-list-cycle-ii/" />
-  <link rel="canonical" href="https://linna-li.github.io/2020/2-add-two-numbers/" />
+  <link rel="prev" href="https://linna-li.github.io/2020/raspberry-set-prometheus/" />
+  <link rel="next" href="https://linna-li.github.io/2020/2-add-two-numbers/" />
+  <link rel="canonical" href="https://linna-li.github.io/2020/raspberry-set-grafana/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           LeetCode-2 | Linna
+           安装grafana系统 | Linna
        
   </title>
-  <meta name="title" content="LeetCode-2 | Linna">
+  <meta name="title" content="安装grafana系统 | Linna">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/linna-li.github.io"
     },
     "articleSection" : "posts",
-    "name" : "LeetCode-2",
-    "headline" : "LeetCode-2",
-    "description" : "Description My Answer Complexity Other Answer ",
+    "name" : "安装grafana系统",
+    "headline" : "安装grafana系统",
+    "description" : "成果：安装grafana，从外部mac可以access到grafana页面\n 参考文档： https:\/\/computingforgeeks.com\/how-to-install-grafana-on-ubuntu-debian\/ 没有用apt指令直接进行安装，是通过APT仓库，这样可以拿到更新的版本。（但是这样的话需要自己来开端口） 主要命令：\n sudo apt update 安装grafana gpg key(查了一下 gpg key是用来加密的），这一步是为了能够下载signed的包。sudo apt-get install -y gnupg2 curl software-properties-common curl https:\/\/packages.grafana.com\/gpg.key | sudo apt-key add - 安装Grafana的APT仓库（APT是安装包管理工具）。sudo add-apt-repository \x26ldquo;deb https:\/\/packages.grafana.com\/oss\/deb stable main\x26rdquo; sudo apt-get update sudo apt-get -y install grafana sudo systemctl enable \x26ndash;now grafana-server 用来启动server systemctl status grafana-service. 检查状态 文档里面还有设置防火墙的一步，我只做了 sudo apt -y install ufw （ufw是一个防火墙的设置工具） sudo ufw enable sudo ufw allow ssh sudo ufw allow 3000\/tcp (最后一步是 sudo ufw allow from 192.",
     "inLanguage" : "en-us",
     "author" : "linna.li",
     "creator" : "linna.li",
@@ -54,11 +54,11 @@
     "accountablePerson" : "linna.li",
     "copyrightHolder" : "linna.li",
     "copyrightYear" : "2020",
-    "datePublished": "2020-12-30 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2020-12-30 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/linna-li.github.io\/2020\/2-add-two-numbers\/",
-    "wordCount" : "6",
-    "keywords" : [ "LinkedList","leetcode", "Linna"]
+    "datePublished": "2020-01-30 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-01-30 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/linna-li.github.io\/2020\/raspberry-set-grafana\/",
+    "wordCount" : "177",
+    "keywords" : [ "raspberry", "Linna"]
 }
 </script>
 
@@ -112,16 +112,16 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">LeetCode-2</h1>
+        <h1 class="post-title" itemprop="name headline">安装grafana系统</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://linna-li.github.io" rel="author">linna.li</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-12-30 itemprop="datePublished">December 30, 2020</time>
+                on <time datetime=2020-01-30 itemprop="datePublished">January 30, 2020</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="https://linna-li.github.io/categories/datastructure/"> DataStructure </a>
+                        <a href="https://linna-li.github.io/categories/note/"> note </a>
                         
                 </span>
         </div>
@@ -142,11 +142,40 @@
           
           
 
-          <h2 id="description">Description</h2>
-<h2 id="my-answer">My Answer</h2>
-<h2 id="complexity">Complexity</h2>
-<h2 id="other-answer">Other Answer</h2>
-
+          <blockquote>
+<p>成果：安装grafana，从外部mac可以access到grafana页面</p>
+</blockquote>
+<p>参考文档：
+<a href="https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-debian/">https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-debian/</a>
+没有用apt指令直接进行安装，是通过APT仓库，这样可以拿到更新的版本。（但是这样的话需要自己来开端口）
+主要命令：</p>
+<ol>
+<li>sudo apt update</li>
+<li>安装grafana gpg key(查了一下 gpg key是用来加密的），这一步是为了能够下载signed的包。sudo apt-get install -y gnupg2 curl software-properties-common curl <a href="https://packages.grafana.com/gpg.key">https://packages.grafana.com/gpg.key</a> | sudo apt-key add -</li>
+<li>安装Grafana的APT仓库（APT是安装包管理工具）。sudo add-apt-repository &ldquo;deb <a href="https://packages.grafana.com/oss/deb">https://packages.grafana.com/oss/deb</a> stable main&rdquo;</li>
+<li>sudo apt-get update</li>
+<li>sudo apt-get -y install grafana</li>
+<li>sudo systemctl enable &ndash;now grafana-server 用来启动server</li>
+<li>systemctl status grafana-service. 检查状态
+文档里面还有设置防火墙的一步，我只做了</li>
+<li>sudo apt -y install ufw （ufw是一个防火墙的设置工具）</li>
+<li>sudo ufw enable</li>
+<li>sudo ufw allow ssh</li>
+<li>sudo ufw allow 3000/tcp
+(最后一步是 sudo ufw allow from 192.168.50.0/24 to any port 3000
+这一步是 to allow incoming access to the server on port 3000，means that the incoming connection will only be allowed if the source address (of the computer trying to connect to the server) is in the following IP range:
+192.168.50.1 - 192.168.50.254。但是对于ubuntu server对于ip没有默认的限制，所以不需要做这一步)</li>
+</ol>
+<p>可能会用到的文件（如果用apt，这些文件会提前被设置好在正确的地方）</p>
+<pre><code>Installs binary to /usr/sbin/grafana-server
+Installs Init.d script to /etc/init.d/grafana-server
+Creates default file (environment vars) to /etc/default/grafana-server
+Installs configuration file to /etc/grafana/grafana.ini
+Installs systemd service (if systemd is available) name grafana-server.service
+The default configuration sets the log file at /var/log/grafana/grafana.log
+The default configuration specifies a sqlite3 db at /var/lib/grafana/grafana.db
+Installs HTML/JS/CSS and other Grafana files at /usr/share/grafana
+</code></pre>
     </div>
 
     <div class="post-copyright">
@@ -160,7 +189,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://linna-li.github.io/2020/2-add-two-numbers/>https://linna-li.github.io/2020/2-add-two-numbers/</span>
+                    <a href=https://linna-li.github.io/2020/raspberry-set-grafana/>https://linna-li.github.io/2020/raspberry-set-grafana/</span>
             </p>
             
             
@@ -172,11 +201,8 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="https://linna-li.github.io/tags/linkedlist/">
-                    #LinkedList</a></span>
-            
-            <span class="tag"><a href="https://linna-li.github.io/tags/leetcode/">
-                    #leetcode</a></span>
+            <span class="tag"><a href="https://linna-li.github.io/tags/raspberry/">
+                    #raspberry</a></span>
             
             </section>
         
@@ -188,10 +214,10 @@
 
     <div class="post-nav">
         
-        <a href="https://linna-li.github.io/2020/raspberry-set-grafana/" class="prev" rel="prev" title="安装grafana系统"><i class="iconfont icon-left"></i>&nbsp;安装grafana系统</a>
+        <a href="https://linna-li.github.io/2020/raspberry-set-prometheus/" class="prev" rel="prev" title="安装prometheus"><i class="iconfont icon-left"></i>&nbsp;安装prometheus</a>
          
         
-        <a href="https://linna-li.github.io/2021/142-linked-list-cycle-ii/" class="next" rel="next" title="LeetCode-142">LeetCode-142&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://linna-li.github.io/2020/2-add-two-numbers/" class="next" rel="next" title="LeetCode-2">LeetCode-2&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

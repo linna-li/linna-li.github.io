@@ -157,7 +157,8 @@ boolean permutation(String s, String t){
     return true;
 }
 ```
-
-
-总结经验：
+总结经验(1/20)：
 1. 没有考虑到要向面试官确认需求！！！
+
+
+3. 把一个字符串里的空格替代成为‘%20’

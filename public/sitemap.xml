@@ -234,7 +234,7 @@
     <url>
       <loc>https://linna-li.github.io/categories/note/</loc>
       
-      <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+      <lastmod>2020-01-30T00:00:00+00:00</lastmod>
       
       
       
@@ -244,7 +244,7 @@
     <url>
       <loc>https://linna-li.github.io/tags/raspberry/</loc>
       
-      <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+      <lastmod>2020-01-30T00:00:00+00:00</lastmod>
       
       
       
@@ -252,7 +252,27 @@
     </url>
   
     <url>
-      <loc>https://linna-li.github.io/2020/raspberry-set/</loc>
+      <loc>https://linna-li.github.io/2020/raspberry-set-grafana/</loc>
+      
+      <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://linna-li.github.io/2020/raspberry-set-prometheus/</loc>
+      
+      <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://linna-li.github.io/2020/raspberry-set-os/</loc>
       
       <lastmod>2020-01-23T00:00:00+00:00</lastmod>
       

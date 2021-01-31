@@ -17,8 +17,7 @@
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://linna-li.github.io/2020/router-security/</guid>
-      <description> 想跟着前辈自己在家搭个server，于是新买了一个路由器，前辈说路由器的安全很重要，为了保护server需要好好设置一下
- </description>
+      <description>路由器的设置目标和图解 As long as it&#39;s all locked inside your home network it&#39;s relatively safe. We want to reject all incoming connections , all the incoming connections are hackers. Internet to WAN to LAN: All Blocked LAN to WAN to Internet: All Allowed LAN to LAN (Server to Server, like Macbook to Server): Allowed 路由器的各种设置  Be careful of any kind of “cloud setup” where you make an account. Don&#39;t use tp-link cloud service Avoid accessing stuff outside your local network.</description>
     </item>
     
   </channel>
