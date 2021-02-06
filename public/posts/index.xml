@@ -6,10 +6,61 @@
     <description>Recent content in Posts on Linna</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://linna-li.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>其他用到的指令</title>
+      <link>https://linna-li.github.io/2021/raspberry-set-other/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2021/raspberry-set-other/</guid>
+      <description>echo $SHELL cat /etc/shells apt install zsh -y chsh -s /bin/zsh sudo reboot</description>
+    </item>
+    
+    <item>
+      <title>安装grafana系统</title>
+      <link>https://linna-li.github.io/2021/raspberry-set-grafana/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2021/raspberry-set-grafana/</guid>
+      <description>成果：安装 grafana，从外部 mac 可以 access 到 grafana 页面
+ 参考文档： https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-debian/ 没有用 apt 指令直接进行安装，是通过 APT 仓库，这样可以拿到更新的版本。（但是这样的话需要自己来开端口） 主要命令：
+ sudo apt update 安装 grafana gpg key(查了一下 gpg key 是用来加密的），这一步是为了能够下载 signed 的包。sudo apt-get install -y gnupg2 curl software-properties-common curl https://packages.grafana.com/gpg.key | sudo apt-key add - 安装 Grafana 的 APT 仓库（APT 是安装包管理工具）。sudo add-apt-repository &amp;ldquo;deb https://packages.grafana.com/oss/deb stable main&amp;rdquo; sudo apt-get update sudo apt-get -y install grafana sudo systemctl enable &amp;ndash;now grafana-server 用来启动 server systemctl status grafana-service.</description>
+    </item>
+    
+    <item>
+      <title>安装prometheus</title>
+      <link>https://linna-li.github.io/2021/raspberry-set-prometheus/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2021/raspberry-set-prometheus/</guid>
+      <description>成果：安装 prometheus 的 node-exporter 来导出 server 的 metrics。prometheus 是用来收集 metrics 的，grafana 通过 pull 的方式去拿数据，然后进行显示。除了 prometheus 之外也有其他的 datasource，比如 influxdb，是通过 push 的方式来向 grafana 发送数据。 参考文档：https://computingforgeeks.com/how-to-monitor-linux-server-performance-with-prometheus-and-grafana-in-5-minutes/
+ 这个文档也是没有用 apt 指令，是通过 APT 仓库进行安装。但是我搞错了版本，应该用 ARM64的版本，但是我用的是 amd64。amd64 是 x86-64, 后来只能清理了所有的 node-exporter，直接用 apt 重新安装的。（用 lsb_release -a 可以看到 ubuntu 版本）
+sudo apt install prometheus-node-exporter sudo systemctl daemon-reload sudo systemctl start prometheus-node-exporter sudo systemctl enable prometheus-node-exporter sudo systemctl status prometheus-node-exporter 成功之后发现从 server 的 local 可以看到 metrics，但是用 mac 上用 curl -GET http://localhost:9100/metrics 没有办法。 用指令来检查端口的开放情况 sudo ufw status verbose 发现 9100 端口没有开放 用指令开放：sudo ufw allow 9100/tcp 因为不熟悉 ubuntu server 的文件结构，所以出错了也不知道应该改哪个文件，只能参考这个文档尽量做到清除干净： http://www.</description>
+    </item>
+    
+    <item>
+      <title>安装ubuntu系统</title>
+      <link>https://linna-li.github.io/2021/raspberry-set-os/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2021/raspberry-set-os/</guid>
+      <description>成果：安装操作系统；运行温度测试脚本；测试网络速度；安装 git 以及同步信息到外部 mac
+ 安装操作系统  Use SD Card + SD Card Reader + Macbook Pro only. recommend selecting: Ubuntu 20.04 LTS (Pi 3/4) 64-bit server OS for arm64 architecture
+  connect the SD Card reader to the macbook pro Follow the OS install instructions and install ubuntu server 20.04, there are a few options though. https://www.raspberrypi.org/documentation/installation/installing-images/ Put the SD Card into the raspberry pi (the slot is on the bottom of the device).</description>
+    </item>
+    
+    <item>
+      <title>设置路由器时要注意的安全问题</title>
+      <link>https://linna-li.github.io/2021/router-security/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/2021/router-security/</guid>
+      <description>路由器的设置目标和图解 As long as it&#39;s all locked inside your home network it&#39;s relatively safe. We want to reject all incoming connections , all the incoming connections are hackers. Internet to WAN to LAN: All Blocked LAN to WAN to Internet: All Allowed LAN to LAN (Server to Server, like Macbook to Server): Allowed 路由器的各种设置  Be careful of any kind of “cloud setup” where you make an account. Don&#39;t use tp-link cloud service Avoid accessing stuff outside your local network.</description>
+    </item>
     
     <item>
       <title>CTCI3-Technical Questions</title>
@@ -164,50 +215,6 @@ Example 8 有一个String的数组，需要给每一个string自己排序，然�
       
       <guid>https://linna-li.github.io/2020/2-add-two-numbers/</guid>
       <description>Description My Answer Complexity Other Answer </description>
-    </item>
-    
-    <item>
-      <title>安装grafana系统</title>
-      <link>https://linna-li.github.io/2020/raspberry-set-grafana/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://linna-li.github.io/2020/raspberry-set-grafana/</guid>
-      <description>成果：安装grafana，从外部mac可以access到grafana页面
- 参考文档： https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-debian/ 没有用apt指令直接进行安装，是通过APT仓库，这样可以拿到更新的版本。（但是这样的话需要自己来开端口） 主要命令：
- sudo apt update 安装grafana gpg key(查了一下 gpg key是用来加密的），这一步是为了能够下载signed的包。sudo apt-get install -y gnupg2 curl software-properties-common curl https://packages.grafana.com/gpg.key | sudo apt-key add - 安装Grafana的APT仓库（APT是安装包管理工具）。sudo add-apt-repository &amp;ldquo;deb https://packages.grafana.com/oss/deb stable main&amp;rdquo; sudo apt-get update sudo apt-get -y install grafana sudo systemctl enable &amp;ndash;now grafana-server 用来启动server systemctl status grafana-service. 检查状态 文档里面还有设置防火墙的一步，我只做了 sudo apt -y install ufw （ufw是一个防火墙的设置工具） sudo ufw enable sudo ufw allow ssh sudo ufw allow 3000/tcp (最后一步是 sudo ufw allow from 192.</description>
-    </item>
-    
-    <item>
-      <title>安装prometheus</title>
-      <link>https://linna-li.github.io/2020/raspberry-set-prometheus/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://linna-li.github.io/2020/raspberry-set-prometheus/</guid>
-      <description>成果：安装prometheus的node-exporter来导出server的metrics。prometheus是用来收集metrics的，grafana通过pull的方式去拿数据，然后进行显示。除了prometheus之外也有其他的datasource，比如influxdb，是通过push的方式来向grafana发送数据。 参考文档：https://computingforgeeks.com/how-to-monitor-linux-server-performance-with-prometheus-and-grafana-in-5-minutes/
- 这个文档也是没有用apt指令，是通过APT仓库进行安装。但是我搞错了版本，应该用 ARM64的版本，但是我用的是amd64。amd64是x86-64, 后来只能清理了所有的node-exporter，直接用apt重新安装的。（用 lsb_release -a可以看到ubuntu版本）
-sudo apt install prometheus-node-exporter sudo systemctl daemon-reload sudo systemctl start prometheus-node-exporter sudo systemctl enable prometheus-node-exporter sudo systemctl status prometheus-node-exporter 成功之后发现从server的local可以看到metrics，但是用mac上用 curl -GET http://localhost:9100/metrics 没有办法。 用指令来检查端口的开放情况 sudo ufw status verbose 发现9100端口没有开放 用指令开放：sudo ufw allow 9100/tcp 因为不熟悉ubuntu server的文件结构，所以出错了也不知道应该改哪个文件，只能参考这个文档尽量做到清除干净： http://www.linfo.org/var.html https://superuser.com/questions/513159/how-to-remove-systemd-services
-安装 sudo apt install tree 可以来看到文件结构。command: tree workspace/ node_exporter.service文件可以自己customized。如果用apt下载，这个文件会被叫做prometheus-node-exporter.service
-$ cat data/node_exporter.service [Unit] Description=Node Exporter Wants=network-online.target After=network-online.target [Service] User=node_exporter Group=node_exporter Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user.</description>
-    </item>
-    
-    <item>
-      <title>安装ubuntu系统</title>
-      <link>https://linna-li.github.io/2020/raspberry-set-os/</link>
-      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://linna-li.github.io/2020/raspberry-set-os/</guid>
-      <description>成果：安装操作系统；运行温度测试脚本；测试网络速度；安装git以及同步信息到外部mac
- 安装操作系统  Use SD Card + SD Card Reader + Macbook Pro only. recommend selecting: Ubuntu 20.04 LTS (Pi 3/4) 64-bit server OS for arm64 architecture
-  connect the SD Card reader to the macbook pro Follow the OS install instructions and install ubuntu server 20.04, there are a few options though. https://www.raspberrypi.org/documentation/installation/installing-images/ Put the SD Card into the raspberry pi (the slot is on the bottom of the device).</description>
-    </item>
-    
-    <item>
-      <title>设置路由器时要注意的安全问题</title>
-      <link>https://linna-li.github.io/2020/router-security/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://linna-li.github.io/2020/router-security/</guid>
-      <description>路由器的设置目标和图解 As long as it&#39;s all locked inside your home network it&#39;s relatively safe. We want to reject all incoming connections , all the incoming connections are hackers. Internet to WAN to LAN: All Blocked LAN to WAN to Internet: All Allowed LAN to LAN (Server to Server, like Macbook to Server): Allowed 路由器的各种设置  Be careful of any kind of “cloud setup” where you make an account. Don&#39;t use tp-link cloud service Avoid accessing stuff outside your local network.</description>
     </item>
     
     <item>
