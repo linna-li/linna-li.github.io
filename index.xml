@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linna on Linna</title>
+    <link>https://linna-li.github.io/</link>
+    <description>Recent content in Linna on Linna</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Posts</title>
+      <link>https://linna-li.github.io/posts/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://linna-li.github.io/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://linna-li.github.io/readme/</guid>
+      <description>&lt;h1 id=&#34;linnagithubio&#34;&gt;linna.github.io&lt;/h1&gt;
+&lt;p&gt;Access by: &lt;a href=&#34;https://linna-li.github.io/&#34;&gt;https://linna-li.github.io/&lt;/a&gt; or I will buy a domain when I have money.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
