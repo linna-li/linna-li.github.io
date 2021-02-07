@@ -9,9 +9,9 @@
   <meta name="description" content="Study Note">
   <meta name="keywords" content="work server-side">
   
-  <link rel="prev" href="https://linna-li.github.io/2021/19-remove-nth-from-end/" />
-  <link rel="next" href="https://linna-li.github.io/2021/ctci1-basic-knowledge/" />
-  <link rel="canonical" href="https://linna-li.github.io/2021/148-sort-list/" />
+  <link rel="prev" href="https://linna-li.github.io/2021/cict7-bit-manipulation/" />
+  
+  <link rel="canonical" href="https://linna-li.github.io/2021/docker-write-image/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           LeetCode-148 | Linna
+           尝试自己写dockerfile | Linna
        
   </title>
-  <meta name="title" content="LeetCode-148 | Linna">
+  <meta name="title" content="尝试自己写dockerfile | Linna">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/linna-li.github.io"
     },
     "articleSection" : "posts",
-    "name" : "LeetCode-148",
-    "headline" : "LeetCode-148",
-    "description" : "Description  给一个链表排序，要求 时间复杂度是 O(n logn)，空间复杂度是 O(logn)\n My Answer  这道题我自己没有做出来。。。 T T 我的想法是分成两份, 然后递归进行排序, 注意这个不叫二分排序！！！ 这个的思想其实是快速排序，平均 的时间复杂度是 O(nlogn)～O(n^2)。但是快速排序不适合链表，没办法链接起来 总结排序算法的复杂度：   很好懂的答案是归并排序。归并排序（特点是 可以利用递归来交换数字，适合链表）可以将链表从中间断开，排好序之后merge。 从中间断开的方法是： 1. 快慢指针。2.或者是统计一下长度之后断开\n Complexity  时间复杂度 O(nlogn) 空间复杂度 O(logn)\n Other Answer  因为其实时间复杂度不符合要求，所以最好的方法是用Bottom Up 思想是：https:\/\/www.youtube.com\/watch?v=M1TwY0nsTZA\n ",
+    "name" : "尝试自己写dockerfile",
+    "headline" : "尝试自己写dockerfile",
+    "description" : "比较简单的只要单独的dockerFile就可以 最简单： FROM ubuntu:20.04\n删除所有的image docker rmi $(docker images -a -q)\nrun一个image，注意要用 -ti\nThe -t is TTY and -i will keep STDIN open. if don\x27t do this, bash will see that there is no more input on STDIN and exit.  docker run -d -ti \x26ndash;entrypoint \/bin\/bash ubuntulln:v1 docker exec -ti 86f8f0e0 \/bin\/bash\n查看硬件系统 root@86f8f0e09045:\/# uname -m x86_64\ncontainer name: the name is randomly generated if you don\x27t set it yourself, but human readable.",
     "inLanguage" : "en-us",
     "author" : "linna.li",
     "creator" : "linna.li",
@@ -54,11 +54,11 @@
     "accountablePerson" : "linna.li",
     "copyrightHolder" : "linna.li",
     "copyrightYear" : "2021",
-    "datePublished": "2021-01-11 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2021-01-11 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/linna-li.github.io\/2021\/148-sort-list\/",
-    "wordCount" : "33",
-    "keywords" : [ "LinkedList","leetcode", "Linna"]
+    "datePublished": "2021-04-29 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2021-04-29 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/linna-li.github.io\/2021\/docker-write-image\/",
+    "wordCount" : "75",
+    "keywords" : [ "docker", "Linna"]
 }
 </script>
 
@@ -112,16 +112,16 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">LeetCode-148</h1>
+        <h1 class="post-title" itemprop="name headline">尝试自己写dockerfile</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://linna-li.github.io" rel="author">linna.li</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2021-01-11 itemprop="datePublished">January 11, 2021</time>
+                on <time datetime=2021-04-29 itemprop="datePublished">April 29, 2021</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="https://linna-li.github.io/categories/datastructure/"> DataStructure </a>
+                        <a href="https://linna-li.github.io/categories/note/"> note </a>
                         
                 </span>
         </div>
@@ -129,8 +129,6 @@
     <div class="post-content">
         
 
-        
-            
         
 
         
@@ -144,31 +142,21 @@
           
           
 
-          <h2 id="description">Description</h2>
-<blockquote>
-<p>给一个链表排序，要求 时间复杂度是 O(n logn)，空间复杂度是 O(logn)</p>
-</blockquote>
-<h2 id="my-answer">My Answer</h2>
-<blockquote>
-<p>这道题我自己没有做出来。。。 T T
-我的想法是分成两份, 然后递归进行排序, 注意这个不叫二分排序！！！ 这个的思想其实是快速排序，<strong>平均</strong> 的时间复杂度是 O(nlogn)～O(n^2)。但是快速排序不适合链表，没办法链接起来
-总结排序算法的复杂度：
-<img src="/images/sort-algorithem.png" alt=""></p>
-</blockquote>
-<blockquote>
-<p>很好懂的答案是归并排序。归并排序（特点是 可以利用递归来交换数字，适合链表）可以将链表从中间断开，排好序之后merge。
-从中间断开的方法是： 1. 快慢指针。2.或者是统计一下长度之后断开</p>
-</blockquote>
-<h2 id="complexity">Complexity</h2>
-<blockquote>
-<p>时间复杂度 O(nlogn)
-空间复杂度 O(logn)</p>
-</blockquote>
-<h2 id="other-answer">Other Answer</h2>
-<blockquote>
-<p>因为其实时间复杂度不符合要求，所以最好的方法是用Bottom Up
-思想是：https://www.youtube.com/watch?v=M1TwY0nsTZA</p>
-</blockquote>
+          <p>比较简单的只要单独的dockerFile就可以
+最简单：
+FROM ubuntu:20.04</p>
+<p>删除所有的image
+docker rmi $(docker images -a -q)</p>
+<p>run一个image，注意要用 -ti</p>
+<h3 id="the--t-is-tty-and--i-will-keep-stdin-open-if-dont-do-this-bash-will-see-that-there-is-no-more-input-on-stdin-and-exit">The -t is TTY and -i will keep STDIN open. if don't do this, bash will see that there is no more input on STDIN and exit.</h3>
+<h3 id="heading"></h3>
+<p>docker run -d -ti &ndash;entrypoint /bin/bash ubuntulln:v1
+docker exec -ti 86f8f0e0 /bin/bash</p>
+<p>查看硬件系统
+root@86f8f0e09045:/# uname -m
+x86_64</p>
+<p>container name: the name is randomly generated if you don't set it yourself, but human readable.
+Reference: <a href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a></p>
 
     </div>
 
@@ -183,7 +171,7 @@
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://linna-li.github.io/2021/148-sort-list/>https://linna-li.github.io/2021/148-sort-list/</span>
+                    <a href=https://linna-li.github.io/2021/docker-write-image/>https://linna-li.github.io/2021/docker-write-image/</span>
             </p>
             
             
@@ -195,11 +183,8 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="https://linna-li.github.io/tags/linkedlist/">
-                    #LinkedList</a></span>
-            
-            <span class="tag"><a href="https://linna-li.github.io/tags/leetcode/">
-                    #leetcode</a></span>
+            <span class="tag"><a href="https://linna-li.github.io/tags/docker/">
+                    #docker</a></span>
             
             </section>
         
@@ -211,10 +196,8 @@
 
     <div class="post-nav">
         
-        <a href="https://linna-li.github.io/2021/19-remove-nth-from-end/" class="prev" rel="prev" title="LeetCode-19"><i class="iconfont icon-left"></i>&nbsp;LeetCode-19</a>
+        <a href="https://linna-li.github.io/2021/cict7-bit-manipulation/" class="prev" rel="prev" title="CTCI7-Bit-manipulation"><i class="iconfont icon-left"></i>&nbsp;CTCI7-Bit-manipulation</a>
          
-        
-        <a href="https://linna-li.github.io/2021/ctci1-basic-knowledge/" class="next" rel="next" title="Cracking the code interview1">Cracking the code interview1&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -256,9 +239,8 @@
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 
